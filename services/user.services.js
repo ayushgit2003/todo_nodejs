@@ -3,7 +3,7 @@ const UserController = require('../controller/user.controller');
 const jwt = require('jsonwebtoken');
 
 class UserService{
-    static async registerUser(email, passwoord) {    
+    static async registerUser(email, password) {    
         try {
             const newUser = new UserModel({ email, password });
             const savedUser = await newUser.save();
